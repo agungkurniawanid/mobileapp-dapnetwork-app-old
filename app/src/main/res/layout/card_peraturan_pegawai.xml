@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e8f6fd"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/img_number_peraturan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_number1v" />
+
+        <TextView
+            android:id="@+id/text_peraturan_pegawai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Pegawai harus menjaga kerahasiaan informasi pelanggan dan perusahaan serta tidak boleh mengungkapkan data pelanggan tanpa izin."
+            android:textColor="#09425d" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

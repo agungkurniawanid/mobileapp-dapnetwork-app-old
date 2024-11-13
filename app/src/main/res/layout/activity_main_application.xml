@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainApplication">
+
+    <EditText
+        android:visibility="invisible"
+        android:id="@+id/shared_nama_pegawai_ma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--UNTUK PEMBUNGKUS NAVIGATION PROFILE-->
+        <RelativeLayout
+            android:id="@+id/assets_wrapper_navprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--SUB PEMBUNGKUS-->
+            <RelativeLayout
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:translationY="-200dp">
+                <!--KOMPONEN BAR MENU ICON-->
+                <RelativeLayout
+                    android:id="@+id/komponen_bar_menu_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/barmenu"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/icon_barmenu" />
+                </RelativeLayout>
+                <!--KOMPONEN TITLE HALAMAN-->
+                <RelativeLayout
+                    android:id="@+id/komponen_title_halaman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/judulHalaman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Dashboard"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                </RelativeLayout>
+                <!--KOMPONEN FOTO PROFILE-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/komponen_foto_profile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/foto_profile_nav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_profile_user1" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--UNTUK FRAME LAYOUT FRAGMENT-->
+        <FrameLayout
+            android:id="@+id/assets_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/assets_bottom_nav"
+            android:layout_below="@+id/assets_wrapper_navprofile" />
+
+        <!--UNTUK BOTTOM NAVIGATION-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/assets_bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:translationY="0dp"
+            app:cardElevation="40dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNav"
+                style="@style/MyBottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:itemIconSize="24dp"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/menu_navigation" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- todo untuk overlay -->
+        <View
+            android:id="@+id/overlay_sidebar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone" />
+
+        <!-- todo untuk sidebar -->
+        <RelativeLayout
+            android:id="@+id/wrapper_sidebar"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="-500dp"
+            android:background="@drawable/custom_background_sidebar"
+            android:clickable="true"
+            android:elevation="8dp"
+            android:focusableInTouchMode="true"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:id="@+id/wrapper_close_sidebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:id="@+id/close_sidebar"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/custom_background_close_sidebar"
+                    android:src="@drawable/icon_close" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/wrapper_logo_sidebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wrapper_close_sidebar"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/logo_dapnet2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/logo_dapnet2" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toLeftOf="@+id/logo_dapnet2"
+                    android:fontFamily="@font/poppins_black"
+                    android:text="Dapnet"
+                    android:textColor="#191C4A"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wrapper_logo_sidebar"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ma_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_home_bottomnav" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Home"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ma_pelanggan_baru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_transaction" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Pelanggan Baru"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ma_penagihan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_schedule_bottomnav" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Penagihan"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ma_pemesanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_pemesanan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Pemesanan"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ma_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_user_bottomnav" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Profile"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

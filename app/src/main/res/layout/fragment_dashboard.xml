@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.Dashboard">
+
+    <EditText
+        android:visibility="invisible"
+        android:id="@+id/shared_nama_pegawai_db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- TODO : PEMBUNGKUS UTAMA KONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- TODO:  PEMBUNGKUS KONTENT TITLE -->
+            <RelativeLayout
+                android:id="@+id/assets_pembungkus_konent_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+                <!-- TODO : PEMBUNGKUS TITLE SAPA DAN NAMA USER-->
+                <RelativeLayout
+                    android:id="@+id/assets_pembungkus_title_sapa_dan_nama_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!-- TODO : TEXT MENYAPA HI -->
+                    <TextView
+                        android:id="@+id/assets_title_sapa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Hi,"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:translationY="-200dp" />
+                    <!-- TODO : TEXT NAMA USER LOGIN -->
+                    <TextView
+                        android:id="@+id/assetes_nama_user_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/assets_title_sapa"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="AGUNG KURNIAWAN"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:translationY="-200dp" />
+                </RelativeLayout>
+                <!-- TODO : PEMBUNGKUS TITLE TANYA KABAR -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/assets_pembungkus_title_sapa_dan_nama_user"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/assets_title_tanya_kabar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Bagaimana kabarmu hari ini?"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:translationX="-500dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <!-- TODO :EMBUNGKUS KONTENT CARD UTAMA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/card_utama"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/background_card_dashboard"
+                    android:paddingStart="20dp"
+                    android:translationX="500dp">
+
+                    <TextView
+                        android:id="@+id/text_penagihan_bulan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Fitur Penagihan"
+                        android:textColor="@color/white"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/text_bulan_penagihan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_penagihan_bulan"
+                        android:layout_marginTop="-10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Client Bulanan"
+                        android:textColor="@color/white"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/text_keterangan_penagihan1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_bulan_penagihan"
+                        android:layout_marginTop="-5dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Lihat bagaimana penggunaan"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/text_keterangan_penagihan2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_keterangan_penagihan1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="fitur mobile penagihan!"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/btn_cek_penagihan"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_keterangan_penagihan2"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Detail"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="-15dp"
+                        android:src="@drawable/image_people_hp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- TODO : PEMBUNGKUS KONTENT CARD INFORMASI -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+                <!-- TODO : JUDUL -->
+                <TextView
+                    android:id="@+id/judul_informasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Fitur Lainnya"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:translationX="-200dp" />
+                <!-- TODO : CARD -->
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/judul_informasi">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/card_information_recycleview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:translationX="-500dp" />
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

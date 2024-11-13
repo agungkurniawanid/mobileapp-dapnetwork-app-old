@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginRegister">
+
+    <!-- Tampilan utama berisi gambar dan teks -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Gambar utama -->
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:padding="15dp"
+            android:src="@drawable/vector_welcome2" />
+
+        <!-- Teks sambutan -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_black"
+                android:text="Login Register"
+                android:textColor="#000000"
+                android:textSize="32dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="Silahkan pilih salah satu tombol login atau register, jika belum punya akun register dulu lalu ke login!"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <!-- Tombol Login dan Register -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <!-- Tombol Login -->
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="#000000"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Login" />
+
+            <!-- Tombol Register -->
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="#407BFF"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Register"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- CardView untuk tampilan Login -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginCardView"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-2000dp"
+        android:backgroundTint="#DEE8EB"
+        app:cardCornerRadius="35dp">
+
+        <!-- Konten CardView Login -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header CardView Login -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <!-- Judul dan Teks Sambutan -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Welcome Back Masbro!!"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_black"
+                        android:text="Login"
+                        android:textColor="@color/black"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+                <!-- Tombol Close -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/closeLogin"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="#407BFF"
+                        android:src="@drawable/icon_close" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Isi CardView Login -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Input Username dan Password -->
+                <EditText
+                    android:id="@+id/inputUsernameLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_border_input1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Masukkan username"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/inputPasswordLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_border_input1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Masukkan password"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textSize="12dp" />
+
+                <!-- Teks Forgot Password -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textForgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Forgot passowrd?"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <!-- Tombol Login -->
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Login" />
+
+                <!-- Teks menuju ke tampilan Register -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Belum punya akun?" />
+
+                    <TextView
+                        android:id="@+id/registerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Register!"
+                        android:textColor="#407BFF" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- View overlay untuk latar belakang transparan -->
+    <View
+        android:id="@+id/hoverBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="#80000000" />
+
+    <!-- CardView untuk tampilan Register -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-2000dp"
+        android:backgroundTint="#DEE8EB"
+        app:cardCornerRadius="35dp">
+
+        <!-- Konten CardView Register -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header CardView Register -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <!-- Judul dan Teks Sambutan Register -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Halo pegawai ea..."
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_black"
+                        android:text="Register"
+                        android:textColor="@color/black"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+                <!-- Tombol Close Register -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/closeRegister"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="#407BFF"
+                        android:src="@drawable/icon_close" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Isi CardView Register dengan ScrollView -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-20dp"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Input Nama, Username, Password, Alamat, Nomor Telepon, Jenis Kelamin, Tanggal Lahir, Email, dan Foto -->
+                    <EditText
+                        android:id="@+id/namaawalReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Masukkan nama awal"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/namaakhirReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Masukkan nama akhir"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/nikReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Masukkan NIK"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="12dp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerRegisterReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
+
+                    <EditText
+                        android:id="@+id/tanggallahirReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Tambahkan tanggal lahir"
+                        android:inputType="date"
+                        android:padding="10dp"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/alamatlengkapReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Alamat lengkap"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/nomortelfonReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Nomor telfon"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/emailReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Masukkan email"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/usernameReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Buat Username"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/passwordReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Buat password"
+                        android:inputType="textPassword"
+                        android:padding="10dp"
+                        android:textSize="12dp" />
+
+
+                    <Spinner
+                        android:id="@+id/agamaReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/upload_foto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/image_upload_gambarr" />
+                    </androidx.cardview.widget.CardView>
+
+                    <EditText
+                        android:id="@+id/patchImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_border_input1"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Patch Gambar"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="12dp"
+                        android:visibility="invisible" />
+
+                    <!-- Tombol Register -->
+                    <Button
+                        android:id="@+id/registertombolReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:height="60dp"
+                        android:backgroundTint="@color/black"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Register" />
+
+                    <!-- Teks menuju ke tampilan Login -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Belum punya akun?" />
+
+                        <TextView
+                            android:id="@+id/loginText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Login!"
+                            android:textColor="#407BFF" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

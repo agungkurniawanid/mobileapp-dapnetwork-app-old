@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/icon_home_bottomnav_checked"
+        android:title="Home" />
+    <item
+        android:id="@+id/client"
+        android:icon="@drawable/icon_transaction"
+        android:title="Client" />
+    <item
+        android:id="@+id/schedule"
+        android:icon="@drawable/icon_schedule_bottomnav"
+        android:title="Jadwal" />
+    <item
+        android:id="@+id/pemesanan"
+        android:icon="@drawable/icon_pemesanan"
+        android:title="Bantuan" />
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/icon_user_bottomnav"
+        android:title="Profile" />
+</menu>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_item_information_dashboard"
+        android:layout_width="230dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        android:layout_height="150dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/background_card"
+                android:layout_width="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_clientcard_dashboardinfo1"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/judul_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Client Baru"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/jumlah_pelanggan"
+                android:layout_marginTop="-20dp"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/judul_card"
+                android:layout_width="wrap_content"
+                android:text="25"
+                android:fontFamily="@font/poppins_black"
+                android:textSize="38dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="-10dp"
+                android:id="@+id/deskripsi_card"
+                android:layout_below="@+id/jumlah_pelanggan"
+                android:layout_width="180dp"
+                android:text="Client yang baru saja selesai transaksi instalasi Wifi."
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

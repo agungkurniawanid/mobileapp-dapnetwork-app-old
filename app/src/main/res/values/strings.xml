@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Dapnetwork App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="deskripsi_lupa_pass1">Masukkan Nomor anda untuk mendapatkan kode OOTP pergantian password</string>
+    <string name="deskripsi_lupa_pass2">Cek Nomor untuk mendapatkan kode OOTP dan masukkan kedalam kolom input</string>
+    <string name="deskripsi_lupa_pass3">Buat ulang kata sandi anda dan konfirm untuk keamanan login pada aplikasi</string>
+    <string name="deskripsi_transaksi">
+        Menambahkan data pelanggan, input pemesanan dan input data pembayaran pelanggan baru.
+    </string>
+    <string name="titel_tagihan">
+        Dibawah ini adalah daftar dari client yang harus ditagih,
+        klik client atau filter sesuai lokasi.
+    </string>
+    <string name="welcome">
+        Selamat datang pegawai DAP Network, aplikasi hanya dapat digunakan untuk melakukan penagihan pada client,
+        transaksi client baru offline dan dapat merubah beberapa data profile anda.
+    </string>
+    <string name="fitur_transaksi_1">
+        1. Buka tekan tombol navigation dibawah dan ketika sudah tampil tambah transaksi, tekan tombol
+        tersebut dan akan dialihkan ke halaman frame tambah transaksi
+    </string>
+    <string name="fitur_transaksi_2">
+        2. Inputkan data pelanggan pada kolom-kolom field yang sudah di sediakan, untuk foto opsional, anda bisa
+        memasukkan foto pelanggan ataupun tidak.
+    </string>
+    <string name="fitur_transaksi_3">
+        3. Setelah selesai input data pelanggan maka tekan tombol lanjutkan.
+    </string>
+    <string name="fitur_transaksi_4">
+        4. Inputkan data pemesanan instalasi yang di inginkan pelanggan, termasuk memasukkan nomor rekening.
+    </string>
+    <string name="fitur_transaksi_5">
+        5. Masukkan juga catatan dari pelanggan, misal wifi di pasang di setup laptop kamar.
+    </string>
+    <string name="fitur_transaksi_6">
+        6. Pilih paket sesuai dengan apa yang dipesan oleh pelanggan. lalu lanjutkan dengan
+        menekan tombol lanjutkan.
+    </string>
+    <string name="fitur_transaksi_7">
+        7. Inputkan nominal dari pembayaran pelanggan. cukup memasukkan input nominal maka akan otomatis
+        terhitung jika sudah sesuai tekan tombol simpan transaksi.
+    </string>
+    <string name="pemesanan_1">
+        1. Pertama tekan menu navigasi dibawah ini, lalu akan dialihkan ke fragment pemesanan.
+    </string>
+    <string name="pemesanan_2">
+        2. Anda bisa melihat pemesanan seminggu kedepan atau semua dengan fitur filter di atas seperti pada
+        video berikut ini.
+    </string>
+    <string name="pemesanan_3">
+        3. Setelah anda selesai melakukan instalasi pada pelanggan maka anda diwajibkan menekan tombol
+        selesai instalasi, setelah menekan maka status pelanggan pemesanan tersebut akan menjadi Sudah selesai.
+    </string>
+    <string name="penagihan_1">
+        1. Buka halaman penagihan dengan menekan icon bagian tengah menu navigasi, lalu pada fitur anda
+        bisa menggunakan fitur filter berdasarkan lokasi seperti contho dibawah ini.
+    </string>
+    <string name="penagihan_2">
+        2. Saat melakukan penagihan silahkan menekan nama atau card pelanggan, lalu anda bisa menelfon langsung pelanggan
+        atau menghubungi via whatsapp pada menu halaman detail pelanggan seperti dibawah ini.
+    </string>
+    <string name="penagihan_3">
+        3. Lalu tekan tombol masukkan pembayaran, pada halaman pembayaran silahkan sesuaikan dengan pembayaran, jika
+        bayar dobel anda bisa menekan checklist bayar double, jika tidak masukkan nominal pada input nominal pembayaran.
+    </string>
+    <string name="penagihan_4">
+        4. Setelah memasukkan nominal atau pembayaran maka simpan dengan menekan tombol simpan pembayaran.
+    </string>
+
+</resources>

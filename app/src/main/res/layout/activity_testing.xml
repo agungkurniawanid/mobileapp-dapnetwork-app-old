@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Testing">
+
+    <!-- List of CheckBoxes -->
+    <CheckBox
+        android:id="@+id/checkBoxProduct1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product 1"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxProduct2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product 2"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxProduct3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product 3"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxProduct4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product 4"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxProduct5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product 5"/>
+
+    <!-- Dynamic EditText Container -->
+    <LinearLayout
+        android:id="@+id/editTextContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExtraText">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mobilepegawaidapnetworkbackup"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".BuktiNota"
+            android:exported="false" />
+        <activity
+            android:name=".FiturPenagihan"
+            android:exported="false" />
+        <activity
+            android:name=".FiturPemesanan"
+            android:exported="false" />
+        <activity
+            android:name=".FiturTransaksi"
+            android:exported="false" />
+        <activity
+            android:name=".LoginRegister"
+            android:exported="false" />
+        <activity
+            android:name=".TagihanBulanan"
+            android:exported="false" />
+        <activity
+            android:name=".Pemesanan"
+            android:exported="false" />
+        <activity
+            android:name=".AddClient"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".EnterOOTP"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Pembayaran"
+            android:exported="false" />
+        <activity
+            android:name=".DetailClient"
+            android:exported="false" />
+        <activity
+            android:name=".PeraturanPegawai"
+            android:exported="false" />
+        <activity
+            android:name=".PaketLayanan"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPegawai"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilePegawai"
+            android:exported="false" />
+        <activity
+            android:name=".MainApplication"
+            android:exported="false" />
+        <activity
+            android:name=".Welcome"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

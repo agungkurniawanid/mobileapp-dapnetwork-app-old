@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Pemesanan">
+
+    <!-- UNTUK ID CLIENT -->
+    <EditText
+        android:id="@+id/clientID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-200dp"
+        android:inputType="text"
+        android:visibility="visible" />
+
+    <!-- UNTUK ID PAKET -->
+    <EditText
+        android:id="@+id/idid"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="-200dp"
+        android:background="@drawable/custom_input1"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Nomor rekening"
+        android:inputType="text"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--UNTUK BTN KEMBALI DAN JUDUL-->
+        <RelativeLayout
+            android:id="@+id/wrapper_komponen_btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- judul halaman -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btn_kembali_pemesanan"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/icon_default_angle_right" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Pemesanan Client"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <EditText
+                    android:id="@+id/nama_pemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/custom_input1"
+                    android:enabled="false"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Nama pemesanan"
+                    android:inputType="text"
+                    android:padding="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/bank_pemesanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input2"
+                    android:padding="20dp"
+                    android:theme="@style/SpinnerTheme" />
+
+                <EditText
+                    android:id="@+id/nomor_rekening"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Nomor rekening"
+                    android:inputType="number"
+                    android:padding="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/pesan_client"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="top"
+                    android:hint="Pesan pelanggan"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:padding="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/jenis_paket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input2"
+                    android:padding="20dp"
+                    android:theme="@style/SpinnerTheme" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle_paket_pesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/btn_simpan_pemesanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_pressed_btn1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Lanjutkan"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
